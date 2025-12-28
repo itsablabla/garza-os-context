@@ -1,0 +1,150 @@
+# GARZA OS System State
+# Updated: 2025-12-28T01:20:00Z
+# Auto-updated by deploy workflows
+
+version: "2.0"
+last_updated: "2025-12-28T01:20:00Z"
+
+# ═══════════════════════════════════════════════════════════
+# CORE MCP SERVERS
+# ═══════════════════════════════════════════════════════════
+
+mcp_servers:
+  craft:
+    status: healthy
+    url: "https://mcp.craft.do/links/93JO4v9tdkb/mcp"
+    tools: 25
+    purpose: "Knowledge management, documents, tasks, collections"
+    
+  garza_home:
+    status: degraded
+    url: "https://garza-home-mcp.fly.dev/sse"
+    key_param: "key=garza-home-v2-26f93afcebe2ea974cceeddbddeb4fdb"
+    tools: 18
+    purpose: "Personal/Home - Beeper, Abode, UniFi, ProtonMail, Graphiti, Bible"
+    missing_tools:
+      - archive_chat
+      - set_chat_reminder
+      - full Abode suite
+      - full UniFi PTZ/chimes
+      - full ProtonMail suite
+    repo: "itsablabla/garza-home-mcp"
+    
+  last_rock_dev:
+    status: healthy
+    url: "https://lastrock-mcp.garzahive.com/sse"
+    key_param: "key=lrlab-dev-v2-a7c9e3f18b2d4e6f"
+    tools: 35
+    purpose: "Dev/Infra - GitHub, Fly.io, n8n, Scout APM, SSH, DNS"
+    repo: "itsablabla/lastrock-mcp"
+
+  cloudflare_platform:
+    status: healthy
+    url: "https://bindings.mcp.cloudflare.com/mcp"
+    tools: 20
+    purpose: "Workers, D1, KV, R2, Hyperdrive"
+
+  zapier:
+    status: healthy
+    url: "https://mcp.zapier.com/api/mcp/a/17598012/mcp"
+    tools: 40+
+    purpose: "Carbon Voice, Quo, Gmail, Tables, Interfaces"
+
+# ═══════════════════════════════════════════════════════════
+# RETIRING (Still connected but phasing out)
+# ═══════════════════════════════════════════════════════════
+
+retiring:
+  cf_mcp:
+    status: active
+    migrate_to: last_rock_dev
+    note: "Shell/SSH tools moving to Last Rock Dev"
+    
+  garza_hive_mcp:
+    status: active  
+    migrate_to: garza_home + last_rock_dev
+    note: "Splitting capabilities between Home and Dev"
+    
+  beeper_standalone:
+    status: redundant
+    migrate_to: garza_home
+    note: "Fully redundant with Garza Home"
+    
+  ssh_backup:
+    status: redundant
+    migrate_to: last_rock_dev
+    
+  telnet_backup:
+    status: redundant
+    migrate_to: last_rock_dev
+
+# ═══════════════════════════════════════════════════════════
+# INFRASTRUCTURE
+# ═══════════════════════════════════════════════════════════
+
+fly_apps:
+  garza-home-mcp:
+    region: iad
+    status: running
+    
+  garza-beeper-intel:
+    region: iad
+    status: running
+    purpose: "Beeper sync worker"
+    
+  garza-ears:
+    region: iad
+    status: running
+    purpose: "Voice memo processor"
+    
+  computer-use-mcp:
+    region: iad
+    status: running
+    version: "4.0.0"
+
+n8n:
+  url: "https://garzasync.app.n8n.cloud"
+  active_workflows:
+    - "Garza Ears - Scanner"
+    - "Garza Ears - HTTP Pipeline"
+    - "Garza Encouraging - Daily"
+    - "Jaden Responder v2"
+    - "GARZA Shield - Security Alerts"
+    - "Risk Compliance Daily Summary"
+    - "Email to Craft Daily Notes"
+    - "Garza Watch - 15min"
+    - "GARZA Task Router v3"
+    - "Autonomous Agent v3"
+
+supabase:
+  project: "garza-os-vault"
+  ref: "vbwhhmdudzigolwhklal"
+  tables:
+    - secrets
+    - audit_log
+    - beeper_messages
+    - beeper_chats
+    - voice_memos
+    - contacts
+
+cloudflare_workers:
+  - workflow-results
+  - voicenotes-webhook
+  - garza-home-mcp (Worker version)
+
+# ═══════════════════════════════════════════════════════════
+# KNOWN ISSUES
+# ═══════════════════════════════════════════════════════════
+
+issues:
+  - id: "BEEPER-500"
+    description: "Beeper tools return 500 intermittently"
+    workaround: "Retry or use alternative MCP"
+    
+  - id: "SSH-TIMEOUT"
+    description: "SSH commands timeout on long operations"
+    workaround: "Use nohup and background, check logs after"
+    
+  - id: "CF-SHELL-500"
+    description: "CF MCP shell_exec returns 500 frequently"
+    workaround: "Use ssh_exec with host='mac' instead"
