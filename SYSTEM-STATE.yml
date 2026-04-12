@@ -1,150 +1,386 @@
 # GARZA OS System State
-# Updated: 2025-12-28T01:20:00Z
-# Auto-updated by deploy workflows
+# Updated: 2026-04-12T22:15:00Z
+# Infrastructure audit by Devin control session
 
-version: "2.0"
-last_updated: "2025-12-28T01:20:00Z"
+version: "3.0"
+last_updated: "2026-04-12T22:15:00Z"
 
 # ═══════════════════════════════════════════════════════════
-# CORE MCP SERVERS
+# SERVERS
+# ═══════════════════════════════════════════════════════════
+
+servers:
+  hostinger_h1:
+    ip: "72.62.86.63"
+    provider: Hostinger
+    vps_id: 1561515
+    plan: "KVM 8 (8 CPU, 32GB RAM, 400GB disk)"
+    os: "Ubuntu 24.04 with Docker and Traefik"
+    state: running
+    role: "Primary — hosts most garzaos.cloud services"
+    created: "2026-04-05"
+    ssh_note: "VPS_ROOT_PASSWORD rejected as of 2026-04-12 — may have been rotated"
+
+  hostinger_h2:
+    ip: "187.77.25.131"
+    provider: Hostinger
+    vps_id: 1540899
+    plan: "KVM 2 (2 CPU, 8GB RAM, 100GB disk)"
+    os: "Ubuntu 24.04 with Docker and Traefik"
+    state: running
+    role: "Secondary — ports 22/80/443 open, no known services mapped"
+    created: "2026-03-30"
+
+  infomaniak_ig:
+    ip: "83.228.213.100"
+    provider: "Infomaniak Cloud"
+    product_id: 43394
+    customer_name: "Data"
+    state: active
+    role: "Nextcloud host"
+    ports_open: [22, 80, 443, 8080]
+    services:
+      - "next.garzaos.online (Nextcloud 32.0.8)"
+
+  infomaniak_id:
+    ip: "83.228.193.101"
+    provider: "Infomaniak Cloud"
+    product_id: 43835
+    customer_name: "Garza"
+    state: active
+    role: "Unknown — nginx default page on HTTP"
+    ports_open: [22, 80, 443, 8443]
+
+# ═══════════════════════════════════════════════════════════
+# SERVICES ON HOSTINGER H1 (72.62.86.63)
+# ═══════════════════════════════════════════════════════════
+
+h1_services:
+  healthy:
+    vault:
+      url: "https://vault.garzaos.cloud"
+      mcp: "https://vault.garzaos.cloud/mcp"
+      purpose: "Bitwarden Vault"
+      status: 200
+      ssl_expiry: "2026-07-05"
+
+    freescout:
+      url: "https://support.nomad-os.cloud"
+      purpose: "FreeScout Helpdesk (11 departments)"
+      status: 200
+      ssl_expiry: "2026-07-07"
+
+    mcpfactory:
+      url: "https://mcpfactory.garzaos.cloud"
+      purpose: "MCP Factory"
+      status: 200
+      ssl_expiry: "2026-07-07"
+
+    mcpfactory_backup:
+      url: "https://mcpfactory-backup.garzaos.cloud"
+      purpose: "MCP Factory Backup"
+      status: 200
+      ssl_expiry: "2026-07-07"
+
+    auto1:
+      url: "https://auto1.garzaos.cloud"
+      purpose: "Sim Studio instance 1"
+      status: 200
+      ssl_expiry: "2026-07-04"
+
+    webdav:
+      url: "https://webdav.garzaos.cloud"
+      purpose: "WebDAV server"
+      status: 401  # auth required = working
+      ssl_expiry: "2026-07-11"
+
+  down_502:
+    deerflow:
+      url: "https://research.garzaos.cloud"
+      purpose: "DeerFlow research tool"
+      ssl_expiry: "2026-07-07"
+
+    agentzero:
+      url: "https://agentzero.garzaos.cloud"
+      purpose: "Agent Zero AI agent"
+      ssl_expiry: "2026-07-05"
+
+    perplexica:
+      url: "https://search.garzaos.cloud"
+      purpose: "Perplexica search engine"
+      ssl_expiry: "2026-07-07"
+
+    akaunting:
+      url: "https://akaunting.garzaos.cloud"
+      purpose: "Akaunting self-hosted"
+      ssl_expiry: "2026-07-05"
+
+    invio:
+      url: "https://invio.garzaos.cloud"
+      purpose: "Invio document sync"
+      ssl_expiry: "2026-07-07"
+
+    superglue:
+      url: "https://superglue.garzaos.cloud"
+      purpose: "Superglue PWA"
+      ssl_expiry: "2026-07-10"
+
+    maxkb:
+      url: "https://maxkb.garzaos.cloud"
+      purpose: "MaxKB knowledge base"
+      ssl_expiry: "2026-07-08"
+
+    maxkb1:
+      url: "https://maxkb1.garzaos.cloud"
+      purpose: "MaxKB instance 2"
+
+    mcpfactory_nomad:
+      url: "https://mcpfactory-nomad.garzaos.cloud"
+      purpose: "MCP Factory Nomad variant"
+
+    protonmail_mcp:
+      url: "https://protonmail.garzaos.cloud/mcp"
+      purpose: "ProtonMail MCP server"
+      ssl_expiry: "2026-07-05"
+
+  no_traefik_route_404:
+    - "auto2.garzaos.cloud"
+    - "auto3.garzaos.cloud"
+    - "auto4.garzaos.cloud"
+    - "auto5.garzaos.cloud"
+
+# ═══════════════════════════════════════════════════════════
+# EXTERNAL MCP SERVERS
 # ═══════════════════════════════════════════════════════════
 
 mcp_servers:
-  craft:
+  mcp_toolkit:
+    url: "https://mcp.garzaos.cloud/mcp"
+    ip: "168.119.29.85"  # Hetzner — external host
     status: healthy
-    url: "https://mcp.craft.do/links/93JO4v9tdkb/mcp"
-    tools: 25
-    purpose: "Knowledge management, documents, tasks, collections"
-    
-  garza_home:
-    status: degraded
-    url: "https://garza-home-mcp.fly.dev/sse"
-    key_param: "key=garza-home-v2-26f93afcebe2ea974cceeddbddeb4fdb"
-    tools: 18
-    purpose: "Personal/Home - Beeper, Abode, UniFi, ProtonMail, Graphiti, Bible"
-    missing_tools:
-      - archive_chat
-      - set_chat_reminder
-      - full Abode suite
-      - full UniFi PTZ/chimes
-      - full ProtonMail suite
-    repo: "itsablabla/garza-home-mcp"
-    
-  last_rock_dev:
-    status: healthy
-    url: "https://lastrock-mcp.garzahive.com/sse"
-    key_param: "key=lrlab-dev-v2-a7c9e3f18b2d4e6f"
-    tools: 35
-    purpose: "Dev/Infra - GitHub, Fly.io, n8n, Scout APM, SSH, DNS"
-    repo: "itsablabla/lastrock-mcp"
+    http_code: 401  # auth required = working
+    ssl_expiry: "2026-07-11"
+    purpose: "MCP Toolkit aggregator (Rust-based)"
+    repo: "itsablabla/mcp-toolkit"
 
-  cloudflare_platform:
+  vault_mcp:
+    url: "https://vault.garzaos.cloud/mcp"
     status: healthy
-    url: "https://bindings.mcp.cloudflare.com/mcp"
-    tools: 20
-    purpose: "Workers, D1, KV, R2, Hyperdrive"
+    http_code: 401
+    purpose: "Bitwarden Vault MCP"
 
-  zapier:
+  composio:
+    url: "https://connect.composio.dev/mcp"
+    auth: "x-consumer-api-key header"
     status: healthy
-    url: "https://mcp.zapier.com/api/mcp/a/17598012/mcp"
-    tools: 40+
-    purpose: "Carbon Voice, Quo, Gmail, Tables, Interfaces"
+    tools: "122+ (GitHub, Slack, etc.)"
+    purpose: "Composio tool aggregator"
+
+  kuse_mcp:
+    url: "https://kuse-mcp-server.fly.dev/mcp"
+    status: unknown
+    tools: 207
+    purpose: "Kuse AI workspace MCP"
+
+  fabric_ai:
+    url: "https://api.fabric.so"
+    auth: "X-Api-Key header"
+    status: healthy
+    purpose: "Primary memory/notes storage (replaced Blinko)"
+    project_folder: "GARZA OS — Agent Handoff (89cd201a-0be0-47f2-a25e-bdc1f85c1ef8)"
 
 # ═══════════════════════════════════════════════════════════
-# RETIRING (Still connected but phasing out)
+# RAILWAY SERVICES (garza-os.com domain)
 # ═══════════════════════════════════════════════════════════
 
-retiring:
-  cf_mcp:
-    status: active
-    migrate_to: last_rock_dev
-    note: "Shell/SSH tools moving to Last Rock Dev"
-    
-  garza_hive_mcp:
-    status: active  
-    migrate_to: garza_home + last_rock_dev
-    note: "Splitting capabilities between Home and Dev"
-    
-  beeper_standalone:
-    status: redundant
-    migrate_to: garza_home
-    note: "Fully redundant with Garza Home"
-    
-  ssh_backup:
-    status: redundant
-    migrate_to: last_rock_dev
-    
-  telnet_backup:
-    status: redundant
-    migrate_to: last_rock_dev
+railway:
+  sim_studio_2:
+    url: "https://sim2.garza-os.com"
+    project_id: "ef478b97-e98f-4cb5-9155-ac5f7ffd50c4"
+    status: healthy
+    ssl_expiry: "2026-06-29"
+
+  jaden_auto:
+    url: "https://auto.garza-os.com"
+    project_id: "0a9e19e1-13c6-46c6-b3d7-cf7d06f75224"
+    status: healthy
+    ssl_expiry: "2026-07-03"
+
+  paperclip:
+    url: "https://paperclip.garza-os.com"
+    project_id: "973eebb8-79aa-4fcd-a488-2eb9c4624049"
+    status: healthy
+    ssl_expiry: "2026-06-29"
+
+  coworker:
+    url: "https://coworker-production-8d66.up.railway.app"
+    project_id: "2fb6e3af-6fe3-4d92-9762-05338ad4f550"
+    status: healthy
+    http_code: 401  # auth required = working
 
 # ═══════════════════════════════════════════════════════════
-# INFRASTRUCTURE
+# NEXTCLOUD (Infomaniak IG)
 # ═══════════════════════════════════════════════════════════
 
-fly_apps:
-  garza-home-mcp:
-    region: iad
-    status: running
-    
-  garza-beeper-intel:
-    region: iad
-    status: running
-    purpose: "Beeper sync worker"
-    
-  garza-ears:
-    region: iad
-    status: running
-    purpose: "Voice memo processor"
-    
-  computer-use-mcp:
-    region: iad
-    status: running
-    version: "4.0.0"
+nextcloud:
+  url: "https://next.garzaos.online"
+  version: "32.0.8"
+  maintenance: false
+  status: healthy
+  ssl_expiry: "2026-07-09"
+  server: infomaniak_ig
 
-n8n:
-  url: "https://garzasync.app.n8n.cloud"
-  active_workflows:
-    - "Garza Ears - Scanner"
-    - "Garza Ears - HTTP Pipeline"
-    - "Garza Encouraging - Daily"
-    - "Jaden Responder v2"
-    - "GARZA Shield - Security Alerts"
-    - "Risk Compliance Daily Summary"
-    - "Email to Craft Daily Notes"
-    - "Garza Watch - 15min"
-    - "GARZA Task Router v3"
-    - "Autonomous Agent v3"
+# ═══════════════════════════════════════════════════════════
+# DNS ZONES
+# ═══════════════════════════════════════════════════════════
 
-supabase:
-  project: "garza-os-vault"
-  ref: "vbwhhmdudzigolwhklal"
-  tables:
-    - secrets
-    - audit_log
-    - beeper_messages
-    - beeper_chats
-    - voice_memos
-    - contacts
+dns:
+  garzaos.cloud:
+    provider: Hostinger
+    records: 22
+    default_target: "72.62.86.63"
+    exceptions:
+      mcp: "168.119.29.85 (Hetzner — MCP Toolkit)"
 
-cloudflare_workers:
-  - workflow-results
-  - voicenotes-webhook
-  - garza-home-mcp (Worker version)
+  nomad-os.cloud:
+    provider: Hostinger
+    records: 8
+    root: "2.57.91.91"
+    subdomains:
+      support: "72.62.86.63"
+      sidebar: "72.62.86.63"
+      mail: "72.62.86.63"
+    email:
+      mx: "mail.nomad-os.cloud"
+      spf: "v=spf1 a mx ip4:72.62.86.63 -all"
+      dkim: configured
+      dmarc: "v=DMARC1; p=quarantine"
+
+  garza-os.com:
+    provider: "Railway (Fastly CDN)"
+    target: "151.101.2.15"
+    note: "DNS zone empty in Hostinger — managed externally via Railway custom domains"
+
+  garzaos.online:
+    provider: Infomaniak
+    product_id: 2130889
+    subdomains:
+      next: "83.228.213.100 (IG)"
+
+# ═══════════════════════════════════════════════════════════
+# SSL CERTIFICATES
+# ═══════════════════════════════════════════════════════════
+
+ssl:
+  issuer: "Let's Encrypt"
+  auto_renewal: "Traefik (H1), provider-managed (Railway, Infomaniak)"
+  earliest_expiry: "2026-06-29 (paperclip.garza-os.com, sim2.garza-os.com)"
+  latest_expiry: "2026-07-11 (mcp.garzaos.cloud, webdav.garzaos.cloud)"
+  status: "All valid — 78-90 days remaining as of 2026-04-12"
 
 # ═══════════════════════════════════════════════════════════
 # KNOWN ISSUES
 # ═══════════════════════════════════════════════════════════
 
 issues:
-  - id: "BEEPER-500"
-    description: "Beeper tools return 500 intermittently"
-    workaround: "Retry or use alternative MCP"
-    
-  - id: "SSH-TIMEOUT"
-    description: "SSH commands timeout on long operations"
-    workaround: "Use nohup and background, check logs after"
-    
-  - id: "CF-SHELL-500"
-    description: "CF MCP shell_exec returns 500 frequently"
-    workaround: "Use ssh_exec with host='mac' instead"
+  - id: "H1-CONTAINERS-DOWN"
+    severity: critical
+    description: "9 Docker containers returning 502 on H1 (72.62.86.63)"
+    affected:
+      - research.garzaos.cloud (DeerFlow)
+      - agentzero.garzaos.cloud (Agent Zero)
+      - search.garzaos.cloud (Perplexica)
+      - akaunting.garzaos.cloud (Akaunting)
+      - invio.garzaos.cloud (Invio)
+      - superglue.garzaos.cloud (Superglue)
+      - maxkb.garzaos.cloud (MaxKB)
+      - maxkb1.garzaos.cloud (MaxKB1)
+      - mcpfactory-nomad.garzaos.cloud
+    workaround: "Need SSH access to H1 to restart containers"
+
+  - id: "SSH-AUTH-FAIL"
+    severity: critical
+    description: "VPS_ROOT_PASSWORD rejected on both H1 and H2"
+    workaround: "Password may have been rotated or SSH password auth disabled. Update secret."
+
+  - id: "PROTONMAIL-MCP-DOWN"
+    severity: high
+    description: "protonmail.garzaos.cloud/mcp returning 502"
+    workaround: "Container on H1 not responding — needs restart"
+
+  - id: "RAILWAY-TOKEN-EXPIRED"
+    severity: medium
+    description: "RAILWAY_API_TOKEN returning 'Not Authorized' on GraphQL API"
+    workaround: "Regenerate token at https://railway.com/account/tokens"
+
+  - id: "AUTO2-5-ORPHAN-DNS"
+    severity: low
+    description: "auto2-5.garzaos.cloud DNS records exist but no Traefik routes configured (404)"
+    workaround: "Either deploy Sim Studio instances or clean up stale DNS"
+
+  - id: "H2-PURPOSE-UNKNOWN"
+    severity: low
+    description: "H2 (187.77.25.131) running but no known services mapped"
+    workaround: "Need SSH access to inspect"
+
+  - id: "ID-PURPOSE-UNKNOWN"
+    severity: low
+    description: "Infomaniak 'Garza' (83.228.193.101) serving nginx default page"
+    workaround: "Need SSH access or Infomaniak dashboard to inspect"
+
+# ═══════════════════════════════════════════════════════════
+# GITHUB REPOS (org: itsablabla)
+# ═══════════════════════════════════════════════════════════
+
+repos:
+  infra:
+    - garza-os           # Main infra configs, apps, templates
+    - garza-os-github    # MCP servers, services, docs, automations
+    - garza-os-context   # System state, tool routing (this repo)
+    - garza-os-orchestrator  # HTTP deployment hub (Python/FastAPI)
+  apps:
+    - sim                # Sim Studio (workflow automation)
+    - sim-copilot-proxy  # Sim Copilot proxy
+    - superglue          # Superglue PWA
+    - jada-agent         # Nextcloud AI agent
+    - paperclip          # AI agent orchestration
+    - mcp-toolkit        # Rust MCP aggregator
+    - kuse_cowork        # Kuse MCP server
+  other:
+    - garza-os-saas      # Multi-tenant SaaS (Vercel)
+    - garza-os-ragie-mcp # Ragie MCP
+    - garza-os-nextcloud # Nextcloud fork
+    - garza-mcp          # Garza MCP router
+    - maxkb-mcp          # MaxKB MCP
+    - nomad-contact-engine # Contact engine
+    - Nomad-KPI-System   # KPI system
+    - garza-home-engine  # Home automation engine
+
+# ═══════════════════════════════════════════════════════════
+# DEVIN SECRETS REFERENCE
+# ═══════════════════════════════════════════════════════════
+
+devin_secrets:
+  infrastructure:
+    - HOSTINGER_API_TOKEN
+    - INFOMANIAK_API_TOKEN
+    - VPS_IP
+    - VPS_ROOT_PASSWORD  # currently not working
+    - RAILWAY_API_TOKEN  # currently returning auth error
+  services:
+    - NEXTCLOUD_USERNAME
+    - NEXTCLOUD_APP_PASSWORD
+    - VAULT_ADMIN_TOKEN
+    - VAULT_MCP_BEARER_TOKEN
+    - VAULT_MCP_URL
+    - FREESCOUT_ADMIN_PASSWORD
+    - FREESCOUT_MCP_API_KEY
+    - PROTONMAIL_MCP_TOKEN
+  ai_keys:
+    - ANTHROPIC_API_KEY
+    - COMPOSIO_MCP_API_KEY
+    - FABRIC_API_KEY
+  other:
+    - CHARGEBEE_API_KEY
+    - CHARGEBEE_SITE
+    - BLINKO_API_TOKEN
