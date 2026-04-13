@@ -238,7 +238,7 @@ The unified MCP server at `mcp.garzaos.cloud` requires these env vars:
 | Item | Value |
 |---|---|
 | Bitwarden Server | vaultwarden-production-0d25.up.railway.app |
-| Client ID | user.2f293b33-d36e-4f43-a65f-d64d1681732a |
+| Client ID | (stored in Railway env) |
 | Client Secret | (stored in Railway env) |
 | Master Password | (stored in Railway env) |
 | API Key | (generated, stored in Railway env) |
