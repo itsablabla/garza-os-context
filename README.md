@@ -20,7 +20,9 @@ This repo contains operational context for Claude sessions. Before doing anythin
 | `TOOL-ROUTER.md` | Decision tree: task → correct tool |
 | `CREDENTIALS-MAP.md` | Where to find credentials (Craft docs, vault keys) |
 | `KNOWN-ISSUES.md` | Workarounds for common failures |
-| `ACTIVE-PROJECTS.md` | Current work in progress |
+| `ACTIVE-PROJECTS.md` | Current work in progress (auto-populated from Devin session tags) |
+| `docs/DEVIN-SESSIONS-INDEX.md` | Full inventory of all Devin sessions, grouped by project |
+| `docs/SESSION-CHANGELOG.md` | Chronological narrative of significant sessions |
 | `snippets/` | Reusable code patterns |
 
 ## Architecture

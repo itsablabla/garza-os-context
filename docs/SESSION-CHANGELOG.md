@@ -103,6 +103,31 @@ Chronological record of significant development sessions.
 
 ---
 
+## 2026-04-19
+
+### Session: Devin Sessions Project Index
+**Time:** 19:37 UTC — present
+**Session ID:** `0f4fb33feb8240d88ab00f0860998f2e`
+**Prompt:** "Go through all Devin sessions find every project all details and add to existing repo or new"
+
+**Summary:** Pulled the full inventory of **141 Devin sessions** from the Devin MCP `devin_session_search` API (paginated), enriched each with human-readable dates, inferred internal `itsablabla/*` repos from titles + tags, and organized them by project tier (CTL / PRJ / PLT / APP / SRV) and brand (Garza, Nomad, Last Rock Labs, Jada).
+
+**Artifacts created:**
+- `docs/DEVIN-SESSIONS-INDEX.md` — full 141-session index grouped by project, with clickable session links, repo links, and known merged-PR references.
+- `ACTIVE-PROJECTS.md` — top-level project roster (referenced by README), auto-populated from tier-tagged sessions (PRJ / PLT / APP / SRV / CTL).
+
+**Key findings:**
+- 141 total sessions over ~17 days (2026-04-02 → 2026-04-19).
+- 39 distinct internal repos referenced; ~68 sessions are research / setup / debugging with no repo output.
+- Existing tier-tagged sessions map cleanly into the infrastructure hierarchy; orphan sessions (no repo) are listed in a dedicated section of the index for triage.
+- 8 merged/open PRs from the last week captured from workspace activity (jada-code, nc-passwords-mcp, jada-coder, kilo-control, capy-control).
+
+**Next steps (not yet actioned):**
+- Review "Sessions Without a Linked Repo" section — some may warrant new dedicated repos (e.g. School Hub, Customer Bridge, Trigger.dev Automations, Zendesk Operations, Chargebee Billing).
+- Automate this index regeneration on a schedule (cron via `devin_schedule_manage`).
+
+---
+
 ## Technical Learnings
 
 ### N8N Expression Syntax
