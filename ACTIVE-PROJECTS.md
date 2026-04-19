@@ -2,7 +2,9 @@
 
 Live project roster, auto-populated from Devin session tags (tier=PRJ/PLT/APP/SRV/CTL).
 
-Last refreshed: 2026-04-19 19:44 UTC
+Last refreshed: 2026-04-19 19:44 UTC (reps column updated 2026-04-19 after scaffolding pass).
+
+Per-brand summaries: [Garza](docs/brands/GARZA.md) · [Nomad](docs/brands/NOMAD.md) · [Last Rock Labs](docs/brands/LAST-ROCK-LABS.md) · [Jada](docs/brands/JADA.md)
 
 ## Control Center (CTL)
 
@@ -18,14 +20,14 @@ Last refreshed: 2026-04-19 19:44 UTC
 | PRJ · GRZ · Garza MCP Development | [`garza-mcp`](https://github.com/itsablabla/garza-mcp), [`mcp-toolkit`](https://github.com/itsablabla/mcp-toolkit) | [`0d691ec2`](https://app.devin.ai/sessions/0d691ec289634598951450ad8469541c) |
 | PRJ · GRZ · Hermes App Development | [`hermes-agent`](https://github.com/itsablabla/hermes-agent) | [`a1d423b7`](https://app.devin.ai/sessions/a1d423b7da984df98cfe587b24f14e2c) |
 | PRJ · GRZ · MCP Ecosystem Strategy | [`mcp-toolkit`](https://github.com/itsablabla/mcp-toolkit), [`garza-mcp`](https://github.com/itsablabla/garza-mcp) | [`5d699a07`](https://app.devin.ai/sessions/5d699a07120247f89de8698a44e90eab) |
-| PRJ · GRZ · School Hub | — | [`3f8d1dbb`](https://app.devin.ai/sessions/3f8d1dbb37384ab9afb118a745b6b47c) |
-| PRJ · GRZ · Trigger.dev Automations | — | [`36233ca6`](https://app.devin.ai/sessions/36233ca6dab1471c8ec4dd433b84d2ad) |
-| PRJ · LRL · Last Rock Labs — Billing (Chargebee) | — | [`eb7bf65a`](https://app.devin.ai/sessions/eb7bf65aa7b548fd9fb85e1aa440f20f) |
+| PRJ · GRZ · School Hub | [`garza-school-hub`](https://github.com/itsablabla/garza-school-hub) | [`3f8d1dbb`](https://app.devin.ai/sessions/3f8d1dbb37384ab9afb118a745b6b47c) |
+| PRJ · GRZ · Trigger.dev Automations | [`garza-trigger-automations`](https://github.com/itsablabla/garza-trigger-automations) | [`36233ca6`](https://app.devin.ai/sessions/36233ca6dab1471c8ec4dd433b84d2ad) |
+| PRJ · LRL · Last Rock Labs — Billing (Chargebee) | [`lastrock-billing`](https://github.com/itsablabla/lastrock-billing) | [`eb7bf65a`](https://app.devin.ai/sessions/eb7bf65aa7b548fd9fb85e1aa440f20f) |
 | PRJ · NMD · Contact Engine & Leads | `nomad-contact-engine` | [`d14a3608`](https://app.devin.ai/sessions/d14a3608d3544532b37b3bbb8d583cc5) |
-| PRJ · NMD · Customer Bridge | — | [`a8007dd7`](https://app.devin.ai/sessions/a8007dd77de74e468263cb26a2bb3c05) |
+| PRJ · NMD · Customer Bridge | [`nomad-customer-bridge`](https://github.com/itsablabla/nomad-customer-bridge) | [`a8007dd7`](https://app.devin.ai/sessions/a8007dd77de74e468263cb26a2bb3c05) |
 | PRJ · NMD · KPI & Metrics Automation | `Nomad-KPI-System` | [`122da568`](https://app.devin.ai/sessions/122da5684879494bb54c6146596a3b2a) |
 | PRJ · NMD · Nomad Helpdesk & Support Ops | [`freescout`](https://github.com/itsablabla/freescout) | [`a3599e6b`](https://app.devin.ai/sessions/a3599e6bbb0348c18ecb83d9b894cfc1) |
-| PRJ · NMD · Zendesk Operations | — | [`79a539a4`](https://app.devin.ai/sessions/79a539a4904340d4afa69f27f39a37d9) |
+| PRJ · NMD · Zendesk Operations | [`nomad-zendesk-ops`](https://github.com/itsablabla/nomad-zendesk-ops) | [`79a539a4`](https://app.devin.ai/sessions/79a539a4904340d4afa69f27f39a37d9) |
 
 ## Platform Tools (PLT)
 
@@ -33,11 +35,11 @@ Last refreshed: 2026-04-19 19:44 UTC
 |-------|-------|---------|
 | PLT · FY · Kuse Cowork | [`kuse_cowork`](https://github.com/itsablabla/kuse_cowork) | [`7282befb`](https://app.devin.ai/sessions/7282befbf66246bfba0502edf25a0da7) |
 | PLT · FY · Kuse MCP Server (207 tools) | [`kuse_cowork`](https://github.com/itsablabla/kuse_cowork) | [`4126d3f4`](https://app.devin.ai/sessions/4126d3f4505547c797bc66a262b52175) |
-| PLT · FY · Nomad MCP Bridge | — | [`68af4c1c`](https://app.devin.ai/sessions/68af4c1c7eef4695adc468447dfd1b2a) |
+| PLT · FY · Nomad MCP Bridge | [`nomad-mcp-bridge`](https://github.com/itsablabla/nomad-mcp-bridge) | [`68af4c1c`](https://app.devin.ai/sessions/68af4c1c7eef4695adc468447dfd1b2a) |
 | PLT · RW · AFFiNE (affine.garza-os.com) | — | [`5b3ae600`](https://app.devin.ai/sessions/5b3ae600ef8f45cf860843f26519953c) |
-| PLT · RW · Coworker Platform | — | [`b757f3db`](https://app.devin.ai/sessions/b757f3db7d7f41c58eddabf7e7d7bc84) |
-| PLT · RW · Genspark MCP Bridge | — | [`48af0243`](https://app.devin.ai/sessions/48af024309104fe086dfb73a337214ba) |
-| PLT · RW · Jaden Auto (auto.garza-os.com) | — | [`c52af87c`](https://app.devin.ai/sessions/c52af87c30fc4bbea063cc45927fefe5) |
+| PLT · RW · Coworker Platform | [`coworker-platform`](https://github.com/itsablabla/coworker-platform) | [`b757f3db`](https://app.devin.ai/sessions/b757f3db7d7f41c58eddabf7e7d7bc84) |
+| PLT · RW · Genspark MCP Bridge | [`genspark-mcp`](https://github.com/itsablabla/genspark-mcp) | [`48af0243`](https://app.devin.ai/sessions/48af024309104fe086dfb73a337214ba) |
+| PLT · RW · Jaden Auto (auto.garza-os.com) | [`jaden-auto`](https://github.com/itsablabla/jaden-auto) | [`c52af87c`](https://app.devin.ai/sessions/c52af87c30fc4bbea063cc45927fefe5) |
 | PLT · RW · OpenManus Hybrid MCP | [`openmanus-garza`](https://github.com/itsablabla/openmanus-garza) | [`39f80657`](https://app.devin.ai/sessions/39f806575fde4c6a9aeea110db378386) |
 | PLT · RW · Paperclip AI (paperclip.garza-os.com) | [`paperclip`](https://github.com/itsablabla/paperclip) | [`957dc0db`](https://app.devin.ai/sessions/957dc0db81ee44caaaf106e141f79149) |
 | PLT · RW · Sim Studio 2 (sim2.garza-os.com) | [`sim`](https://github.com/itsablabla/sim) | [`e7dc8c3d`](https://app.devin.ai/sessions/e7dc8c3d0c1742828fe0b44c24494d22) |

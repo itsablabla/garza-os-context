@@ -18,15 +18,17 @@ Complete inventory of **141 Devin sessions** associated with this workspace, gro
 - [Control Center (CTL) (1)](#control-center-ctl)
 - [Uncategorized / Research (68)](#uncategorized-research)
 - [Nomad-Helpdesk (1)](#nomad-helpdesk)
+- [New Repos Scaffolded This Pass](#new-repos-scaffolded-this-pass)
+- [Internal Repos Touched](#internal-repos-touched)
 
 ## Garza (GRZ)
 
 | Date | Title | Status | Session | Repos | PRs |
 |------|-------|--------|---------|-------|-----|
 | 2026-04-13 | Test mcpServers garza improvement | suspended (inactivity) | [`dcc815e3`](https://app.devin.ai/sessions/dcc815e303a743f18a34a054ebdf8d55) | — | — |
-| 2026-04-12 | PRJ · GRZ · School Hub | suspended (inactivity) | [`3f8d1dbb`](https://app.devin.ai/sessions/3f8d1dbb37384ab9afb118a745b6b47c) | — | — |
+| 2026-04-12 | PRJ · GRZ · School Hub | suspended (inactivity) | [`3f8d1dbb`](https://app.devin.ai/sessions/3f8d1dbb37384ab9afb118a745b6b47c) | [`garza-school-hub`](https://github.com/itsablabla/garza-school-hub) *(pre-existing)* | — |
 | 2026-04-12 | PRJ · GRZ · Garza MCP Development | suspended (inactivity) | [`0d691ec2`](https://app.devin.ai/sessions/0d691ec289634598951450ad8469541c) | [`garza-mcp`](https://github.com/itsablabla/garza-mcp), [`mcp-toolkit`](https://github.com/itsablabla/mcp-toolkit) | — |
-| 2026-04-12 | PRJ · GRZ · Trigger.dev Automations | suspended (inactivity) | [`36233ca6`](https://app.devin.ai/sessions/36233ca6dab1471c8ec4dd433b84d2ad) | — | — |
+| 2026-04-12 | PRJ · GRZ · Trigger.dev Automations | suspended (inactivity) | [`36233ca6`](https://app.devin.ai/sessions/36233ca6dab1471c8ec4dd433b84d2ad) | [`garza-trigger-automations`](https://github.com/itsablabla/garza-trigger-automations) *(scaffolded)* | — |
 | 2026-04-12 | PLT · RW · AFFiNE (affine.garza-os.com) | suspended (inactivity) | [`5b3ae600`](https://app.devin.ai/sessions/5b3ae600ef8f45cf860843f26519953c) | — | — |
 | 2026-04-12 | APP · H1 · Perplexica Search (search.garzaos.cloud) | suspended (inactivity) | [`fcbc0eb0`](https://app.devin.ai/sessions/fcbc0eb0fc294a3ca093ebd48c3cdb73) | — | — |
 | 2026-04-12 | APP · H1 · Agent Zero (agentzero.garzaos.cloud) | suspended (inactivity) | [`ebbe44f8`](https://app.devin.ai/sessions/ebbe44f850d3476b9feefb9c8d13c9c7) | [`agent-zero`](https://github.com/itsablabla/agent-zero) | — |
@@ -34,7 +36,7 @@ Complete inventory of **141 Devin sessions** associated with this workspace, gro
 | 2026-04-12 | PRJ · GRZ · Hermes App Development | suspended (inactivity) | [`a1d423b7`](https://app.devin.ai/sessions/a1d423b7da984df98cfe587b24f14e2c) | [`hermes-agent`](https://github.com/itsablabla/hermes-agent) | — |
 | 2026-04-12 | PRJ · GRZ · MCP Ecosystem Strategy | suspended (inactivity) | [`5d699a07`](https://app.devin.ai/sessions/5d699a07120247f89de8698a44e90eab) | [`mcp-toolkit`](https://github.com/itsablabla/mcp-toolkit), [`garza-mcp`](https://github.com/itsablabla/garza-mcp) | — |
 | 2026-04-12 | PRJ · GRZ · Garza Home Automation | suspended (inactivity) | [`7de5ec66`](https://app.devin.ai/sessions/7de5ec6626614c2690a891d4deeab3e7) | [`boulder-home-automation`](https://github.com/itsablabla/boulder-home-automation), [`garza-home-mcp`](https://github.com/itsablabla/garza-home-mcp) | — |
-| 2026-04-12 | PLT · RW · Jaden Auto (auto.garza-os.com) | suspended (inactivity) | [`c52af87c`](https://app.devin.ai/sessions/c52af87c30fc4bbea063cc45927fefe5) | — | — |
+| 2026-04-12 | PLT · RW · Jaden Auto (auto.garza-os.com) | suspended (inactivity) | [`c52af87c`](https://app.devin.ai/sessions/c52af87c30fc4bbea063cc45927fefe5) | [`jaden-auto`](https://github.com/itsablabla/jaden-auto) *(scaffolded)* | — |
 | 2026-04-12 | PLT · RW · Paperclip AI (paperclip.garza-os.com) | suspended (inactivity) | [`957dc0db`](https://app.devin.ai/sessions/957dc0db81ee44caaaf106e141f79149) | [`paperclip`](https://github.com/itsablabla/paperclip) | — |
 | 2026-04-12 | PLT · RW · Sim Studio 2 (sim2.garza-os.com) | suspended (inactivity) | [`e7dc8c3d`](https://app.devin.ai/sessions/e7dc8c3d0c1742828fe0b44c24494d22) | [`sim`](https://github.com/itsablabla/sim) | — |
 | 2026-04-12 | APP · H1 · Fabric AI Memory (fabric.garzaos.cloud) | suspended (inactivity) | [`41570187`](https://app.devin.ai/sessions/41570187f61b47a7aa3d13a783a902d8) | — | — |
@@ -57,13 +59,13 @@ Complete inventory of **141 Devin sessions** associated with this workspace, gro
 
 | Date | Title | Status | Session | Repos | PRs |
 |------|-------|--------|---------|-------|-----|
-| 2026-04-12 | PRJ · NMD · Customer Bridge | suspended (inactivity) | [`a8007dd7`](https://app.devin.ai/sessions/a8007dd77de74e468263cb26a2bb3c05) | — | — |
+| 2026-04-12 | PRJ · NMD · Customer Bridge | suspended (inactivity) | [`a8007dd7`](https://app.devin.ai/sessions/a8007dd77de74e468263cb26a2bb3c05) | [`nomad-customer-bridge`](https://github.com/itsablabla/nomad-customer-bridge) *(pre-existing)* | — |
 | 2026-04-12 | PRJ · NMD · Contact Engine & Leads | suspended (inactivity) | [`d14a3608`](https://app.devin.ai/sessions/d14a3608d3544532b37b3bbb8d583cc5) | `nomad-contact-engine` | — |
-| 2026-04-12 | PRJ · NMD · Zendesk Operations | suspended (inactivity) | [`79a539a4`](https://app.devin.ai/sessions/79a539a4904340d4afa69f27f39a37d9) | — | — |
+| 2026-04-12 | PRJ · NMD · Zendesk Operations | suspended (inactivity) | [`79a539a4`](https://app.devin.ai/sessions/79a539a4904340d4afa69f27f39a37d9) | [`nomad-zendesk-ops`](https://github.com/itsablabla/nomad-zendesk-ops) *(scaffolded)* | — |
 | 2026-04-12 | APP · H1 · Akaunting (akaunting.garzaos.cloud) | suspended (inactivity) | [`b8f29bbd`](https://app.devin.ai/sessions/b8f29bbd37d0497eb9e4c8c9923b883e) | [`akaunting`](https://github.com/itsablabla/akaunting) | — |
 | 2026-04-12 | PRJ · NMD · KPI & Metrics Automation | suspended (inactivity) | [`122da568`](https://app.devin.ai/sessions/122da5684879494bb54c6146596a3b2a) | `Nomad-KPI-System` | — |
 | 2026-04-12 | PRJ · NMD · Nomad Helpdesk & Support Ops | suspended (inactivity) | [`a3599e6b`](https://app.devin.ai/sessions/a3599e6bbb0348c18ecb83d9b894cfc1) | [`freescout`](https://github.com/itsablabla/freescout) | — |
-| 2026-04-12 | PLT · FY · Nomad MCP Bridge | suspended (inactivity) | [`68af4c1c`](https://app.devin.ai/sessions/68af4c1c7eef4695adc468447dfd1b2a) | — | — |
+| 2026-04-12 | PLT · FY · Nomad MCP Bridge | suspended (inactivity) | [`68af4c1c`](https://app.devin.ai/sessions/68af4c1c7eef4695adc468447dfd1b2a) | [`nomad-mcp-bridge`](https://github.com/itsablabla/nomad-mcp-bridge) *(scaffolded)* | — |
 | 2026-04-12 | APP · H1 · Actual Budget — Nomad & Garza Family | suspended (inactivity) | [`97742bd3`](https://app.devin.ai/sessions/97742bd3f5a14351bab170762ab5a364) | [`actual`](https://github.com/itsablabla/actual) | — |
 | 2026-04-12 | APP · H1 · FreeScout — Nomad Helpdesk | suspended (inactivity) | [`cf7af1ae`](https://app.devin.ai/sessions/cf7af1ae7ffb4a9994b5923b3760d41b) | [`freescout`](https://github.com/itsablabla/freescout) | — |
 | 2026-04-11 | Automate Nomad's numbers | suspended (inactivity) | [`0d98eeda`](https://app.devin.ai/sessions/0d98eeda91db4260a4f8d2c735620922) | — | — |
@@ -76,7 +78,7 @@ Complete inventory of **141 Devin sessions** associated with this workspace, gro
 | Date | Title | Status | Session | Repos | PRs |
 |------|-------|--------|---------|-------|-----|
 | 2026-04-12 | APP · H1 · Invio Invoicing (invio.garzaos.cloud) | suspended (inactivity) | [`b13e5906`](https://app.devin.ai/sessions/b13e59065e71403fb388190ce198dc45) | — | — |
-| 2026-04-12 | PRJ · LRL · Last Rock Labs — Billing (Chargebee) | suspended (inactivity) | [`eb7bf65a`](https://app.devin.ai/sessions/eb7bf65aa7b548fd9fb85e1aa440f20f) | — | — |
+| 2026-04-12 | PRJ · LRL · Last Rock Labs — Billing (Chargebee) | suspended (inactivity) | [`eb7bf65a`](https://app.devin.ai/sessions/eb7bf65aa7b548fd9fb85e1aa440f20f) | [`lastrock-billing`](https://github.com/itsablabla/lastrock-billing) *(scaffolded)* | — |
 
 ## Jada
 
@@ -93,10 +95,10 @@ Complete inventory of **141 Devin sessions** associated with this workspace, gro
 | Date | Title | Status | Session | Repos | PRs |
 |------|-------|--------|---------|-------|-----|
 | 2026-04-12 | PLT · RW · OpenManus Hybrid MCP | suspended (inactivity) | [`39f80657`](https://app.devin.ai/sessions/39f806575fde4c6a9aeea110db378386) | [`openmanus-garza`](https://github.com/itsablabla/openmanus-garza) | — |
-| 2026-04-12 | PLT · RW · Genspark MCP Bridge | suspended (inactivity) | [`48af0243`](https://app.devin.ai/sessions/48af024309104fe086dfb73a337214ba) | — | — |
+| 2026-04-12 | PLT · RW · Genspark MCP Bridge | suspended (inactivity) | [`48af0243`](https://app.devin.ai/sessions/48af024309104fe086dfb73a337214ba) | [`genspark-mcp`](https://github.com/itsablabla/genspark-mcp) *(scaffolded)* | — |
 | 2026-04-12 | PLT · FY · Kuse Cowork | suspended (inactivity) | [`7282befb`](https://app.devin.ai/sessions/7282befbf66246bfba0502edf25a0da7) | [`kuse_cowork`](https://github.com/itsablabla/kuse_cowork) | — |
 | 2026-04-12 | PLT · FY · Kuse MCP Server (207 tools) | suspended (inactivity) | [`4126d3f4`](https://app.devin.ai/sessions/4126d3f4505547c797bc66a262b52175) | [`kuse_cowork`](https://github.com/itsablabla/kuse_cowork) | — |
-| 2026-04-12 | PLT · RW · Coworker Platform | suspended (inactivity) | [`b757f3db`](https://app.devin.ai/sessions/b757f3db7d7f41c58eddabf7e7d7bc84) | — | — |
+| 2026-04-12 | PLT · RW · Coworker Platform | suspended (inactivity) | [`b757f3db`](https://app.devin.ai/sessions/b757f3db7d7f41c58eddabf7e7d7bc84) | [`coworker-platform`](https://github.com/itsablabla/coworker-platform) *(scaffolded)* | — |
 
 ## Apps & Services (APP)
 
@@ -214,7 +216,7 @@ Complete inventory of **141 Devin sessions** associated with this workspace, gro
 
 These sessions describe projects/work with no inferred internal repo. Candidates for either (a) documentation-only, or (b) creating a new repo if ongoing development is planned.
 
-Total orphans: **73**
+Total orphans: **64** (was 73 — 9 were scaffolded into new/existing repos on 2026-04-19; see [New Repos Scaffolded This Pass](#new-repos-scaffolded-this-pass)).
 
 | Date | Title | Session | Tags |
 |------|-------|---------|------|
@@ -236,19 +238,10 @@ Total orphans: **73**
 | 2026-04-13 | Install voodflow/voodflow | [`0320650a`](https://app.devin.ai/sessions/0320650a52904f7a9dff91e92d3af90f) | agent:devin-rs |
 | 2026-04-13 | Test mcpServers garza improvement | [`dcc815e3`](https://app.devin.ai/sessions/dcc815e303a743f18a34a054ebdf8d55) | agent:devin-rs |
 | 2026-04-13 | Review projects and them | [`d2e645c7`](https://app.devin.ai/sessions/d2e645c7974642b2b73dd662685a7cff) | agent:devin-rs |
-| 2026-04-12 | PRJ · GRZ · School Hub | [`3f8d1dbb`](https://app.devin.ai/sessions/3f8d1dbb37384ab9afb118a745b6b47c) | tier:prj,project:garza,app:school-hub,agent:devin-rs |
-| 2026-04-12 | PRJ · NMD · Customer Bridge | [`a8007dd7`](https://app.devin.ai/sessions/a8007dd77de74e468263cb26a2bb3c05) | tier:prj,project:nomad,app:customer-bridge,agent:devin-rs |
-| 2026-04-12 | PLT · RW · Genspark MCP Bridge | [`48af0243`](https://app.devin.ai/sessions/48af024309104fe086dfb73a337214ba) | tier:plt,loc:rw,app:genspark-mcp,agent:devin-rs |
-| 2026-04-12 | PRJ · GRZ · Trigger.dev Automations | [`36233ca6`](https://app.devin.ai/sessions/36233ca6dab1471c8ec4dd433b84d2ad) | tier:prj,project:garza,app:trigger-dev,priority:high,agent:devin-rs |
-| 2026-04-12 | PRJ · NMD · Zendesk Operations | [`79a539a4`](https://app.devin.ai/sessions/79a539a4904340d4afa69f27f39a37d9) | tier:prj,project:nomad,app:zendesk,priority:high,agent:devin-rs |
 | 2026-04-12 | PLT · RW · AFFiNE (affine.garza-os.com) | [`5b3ae600`](https://app.devin.ai/sessions/5b3ae600ef8f45cf860843f26519953c) | tier:plt,loc:rw,app:affine,domain:garza-os.com,agent:devin-rs |
 | 2026-04-12 | APP · H1 · Invio Invoicing (invio.garzaos.cloud) | [`b13e5906`](https://app.devin.ai/sessions/b13e59065e71403fb388190ce198dc45) | tier:app,loc:h1,app:invio,domain:garzaos.cloud,project:last-rock-labs,agent:devin-rs |
 | 2026-04-12 | APP · H1 · Perplexica Search (search.garzaos.cloud) | [`fcbc0eb0`](https://app.devin.ai/sessions/fcbc0eb0fc294a3ca093ebd48c3cdb73) | tier:app,loc:h1,app:perplexica,domain:garzaos.cloud,agent:devin-rs |
 | 2026-04-12 | SRV · MM · Mac Mini Server (168.119.29.85) | [`6a4ee04b`](https://app.devin.ai/sessions/6a4ee04bd53d41fa8ca4ae61a12406ea) | tier:srv,loc:mm,priority:critical,agent:devin-rs |
-| 2026-04-12 | PRJ · LRL · Last Rock Labs — Billing (Chargebee) | [`eb7bf65a`](https://app.devin.ai/sessions/eb7bf65aa7b548fd9fb85e1aa440f20f) | tier:prj,project:last-rock-labs,app:chargebee,priority:critical,agent:devin-rs |
-| 2026-04-12 | PLT · FY · Nomad MCP Bridge | [`68af4c1c`](https://app.devin.ai/sessions/68af4c1c7eef4695adc468447dfd1b2a) | tier:plt,loc:fy,app:nomad-mcp,project:nomad,agent:devin-rs |
-| 2026-04-12 | PLT · RW · Coworker Platform | [`b757f3db`](https://app.devin.ai/sessions/b757f3db7d7f41c58eddabf7e7d7bc84) | tier:plt,loc:rw,app:coworker,agent:devin-rs |
-| 2026-04-12 | PLT · RW · Jaden Auto (auto.garza-os.com) | [`c52af87c`](https://app.devin.ai/sessions/c52af87c30fc4bbea063cc45927fefe5) | tier:plt,loc:rw,app:jaden-auto,domain:garza-os.com,agent:devin-rs |
 | 2026-04-12 | APP · IG · ProtonMail Bridge | [`105c3ef2`](https://app.devin.ai/sessions/105c3ef21bcc41bfb5cc76779d9c49b2) | tier:app,loc:ig,app:protonmail-bridge,agent:devin-rs |
 | 2026-04-12 | APP · IG · Hatchet Task Orchestration | [`c18aa1a9`](https://app.devin.ai/sessions/c18aa1a9204b48e09876c51e7c435138) | tier:app,loc:ig,app:hatchet,priority:high,agent:devin-rs |
 | 2026-04-12 | APP · IG · Windmill Workflow Engine | [`ccb6f21d`](https://app.devin.ai/sessions/ccb6f21da93447f4862661e6ed4c3033) | tier:app,loc:ig,app:windmill,domain:garzaos.online,priority:high,agent:devin-rs |
@@ -291,6 +284,24 @@ Total orphans: **73**
 | 2026-04-03 | Parse API programmatic control | [`7838a049`](https://app.devin.ai/sessions/7838a0490c4847c2a92e2fb72e8ba4c2) | agent:devin-rs |
 | 2026-04-02 | railways api 256904c0-be0d-4129-85ca-f45ceb6d170d | [`020b1b44`](https://app.devin.ai/sessions/020b1b442e314d898531db1d36f21c98) | — |
 | 2026-04-02 | First session | [`16f326fb`](https://app.devin.ai/sessions/16f326fbec2141c8b4fe6937cb752357) | — |
+
+## New Repos Scaffolded This Pass
+
+On 2026-04-19, session [`0f4fb33f`](https://app.devin.ai/sessions/0f4fb33feb8240d88ab00f0860998f2e) scaffolded 7 new repos and identified 2 pre-existing ones for 9 orphan tier-tagged sessions. Each new repo has a stub `README.md` pointing back to its originating session; the 2 pre-existing repos already contained real code.
+
+| Origin Session | Title | Repo | State |
+|---|---|---|---|
+| [`3f8d1dbb`](https://app.devin.ai/sessions/3f8d1dbb37384ab9afb118a745b6b47c) | PRJ · GRZ · School Hub | [`itsablabla/garza-school-hub`](https://github.com/itsablabla/garza-school-hub) | **pre-existing** — contains working code (Python, grade-sync/chore/daily-briefings) |
+| [`a8007dd7`](https://app.devin.ai/sessions/a8007dd77de74e468263cb26a2bb3c05) | PRJ · NMD · Customer Bridge | [`itsablabla/nomad-customer-bridge`](https://github.com/itsablabla/nomad-customer-bridge) | **pre-existing** |
+| [`36233ca6`](https://app.devin.ai/sessions/36233ca6dab1471c8ec4dd433b84d2ad) | PRJ · GRZ · Trigger.dev Automations | [`itsablabla/garza-trigger-automations`](https://github.com/itsablabla/garza-trigger-automations) | new (stub README) |
+| [`79a539a4`](https://app.devin.ai/sessions/79a539a4904340d4afa69f27f39a37d9) | PRJ · NMD · Zendesk Operations | [`itsablabla/nomad-zendesk-ops`](https://github.com/itsablabla/nomad-zendesk-ops) | new (stub README) |
+| [`eb7bf65a`](https://app.devin.ai/sessions/eb7bf65aa7b548fd9fb85e1aa440f20f) | PRJ · LRL · Last Rock Labs — Billing (Chargebee) | [`itsablabla/lastrock-billing`](https://github.com/itsablabla/lastrock-billing) | new (stub README) |
+| [`68af4c1c`](https://app.devin.ai/sessions/68af4c1c7eef4695adc468447dfd1b2a) | PLT · FY · Nomad MCP Bridge | [`itsablabla/nomad-mcp-bridge`](https://github.com/itsablabla/nomad-mcp-bridge) | new (stub README) |
+| [`b757f3db`](https://app.devin.ai/sessions/b757f3db7d7f41c58eddabf7e7d7bc84) | PLT · RW · Coworker Platform | [`itsablabla/coworker-platform`](https://github.com/itsablabla/coworker-platform) | new (stub README) |
+| [`c52af87c`](https://app.devin.ai/sessions/c52af87c30fc4bbea063cc45927fefe5) | PLT · RW · Jaden Auto | [`itsablabla/jaden-auto`](https://github.com/itsablabla/jaden-auto) | new (stub README) |
+| [`48af0243`](https://app.devin.ai/sessions/48af024309104fe086dfb73a337214ba) | PLT · RW · Genspark MCP Bridge | [`itsablabla/genspark-mcp`](https://github.com/itsablabla/genspark-mcp) | new (stub README) |
+
+> **Caveat on orphan detection:** The initial inference pass only listed `itsablabla/*` **public** repos (via unauthenticated GitHub API). Several "orphans" were actually private pre-existing repos — e.g. `garza-school-hub`, `nomad-customer-bridge`, `nomad-contact-engine`, `Nomad-KPI-System`, `garza-security-monitor`, `proton-unified-mcp`, `capy-control`. The scaffolding step discovered this by attempting creation and handling 422 conflicts. Remaining orphans (64) are mostly short-lived research / setup / debugging sessions with no code deliverable.
 
 ## Internal Repos Touched
 
