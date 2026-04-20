@@ -42,8 +42,8 @@ Complete inventory of **141 Devin sessions** associated with this workspace, gro
 | 2026-04-12 | APP · H1 · DeerFlow Research (deerflow.garzaos.cloud) | suspended (inactivity) | [`523efecb`](https://app.devin.ai/sessions/523efecbeac645df81c6898c9a02c73f) | [`deer-flow-quickstart`](https://github.com/itsablabla/deer-flow-quickstart), [`garza-research`](https://github.com/itsablabla/garza-research), [`jada-research`](https://github.com/itsablabla/jada-research), [`jada-research-2`](https://github.com/itsablabla/jada-research-2), [`nomad-research`](https://github.com/itsablabla/nomad-research) | — |
 | 2026-04-12 | APP · H1 · Bitwarden Vault (vault.garzaos.cloud) | suspended (inactivity) | [`8536291a`](https://app.devin.ai/sessions/8536291a7d7e44779da4cdbae3effe3b) | [`bitwarden-mcp-server`](https://github.com/itsablabla/bitwarden-mcp-server), [`vaultwarden`](https://github.com/itsablabla/vaultwarden) | — |
 | 2026-04-12 | APP · H1 · Sim Studio Fleet (sim.garzaos.cloud) | suspended (inactivity) | [`b97256e6`](https://app.devin.ai/sessions/b97256e6174b4ce1988a93d911cee848) | [`sim`](https://github.com/itsablabla/sim), [`sim-copilot-proxy`](https://github.com/itsablabla/sim-copilot-proxy) | — |
-| 2026-04-12 | SRV · IG · Garza Server (83.228.213.100) | suspended (inactivity) | [`643ff0b0`](https://app.devin.ai/sessions/643ff0b0179f4d8c93e8de551d65b63e) | — | — |
-| 2026-04-12 | SRV · H1 · Primary Garza Cloud (72.62.86.63) | suspended (inactivity) | [`5abfcfc4`](https://app.devin.ai/sessions/5abfcfc4f888449eab9c8e562cb0f377) | — | — |
+| 2026-04-12 | SRV · IG · Garza Server | suspended (inactivity) | [`643ff0b0`](https://app.devin.ai/sessions/643ff0b0179f4d8c93e8de551d65b63e) | — | — |
+| 2026-04-12 | SRV · H1 · Primary Garza Cloud | suspended (inactivity) | [`5abfcfc4`](https://app.devin.ai/sessions/5abfcfc4f888449eab9c8e562cb0f377) | — | — |
 | 2026-04-12 | Garza MCP | suspended (inactivity) | [`436fcc78`](https://app.devin.ai/sessions/436fcc78dd4f4a75a8c45f7532677e3c) | [`garza-mcp`](https://github.com/itsablabla/garza-mcp), [`mcp-toolkit`](https://github.com/itsablabla/mcp-toolkit), [`garza-mcp-api-server`](https://github.com/itsablabla/garza-mcp-api-server), [`garza-mcp-router`](https://github.com/itsablabla/garza-mcp-router) | — |
 | 2026-04-12 | Create Garza sessions | suspended (inactivity) | [`2715ec80`](https://app.devin.ai/sessions/2715ec80e1674ae0af23089f2e7f31f7) | — | — |
 | 2026-04-11 | Check host maxkb.garzaos.cloud | suspended (inactivity) | [`d76ae46e`](https://app.devin.ai/sessions/d76ae46eaffd4d87b67c9556826f8e98) | [`MaxKB`](https://github.com/itsablabla/MaxKB), [`maxkb-mcp`](https://github.com/itsablabla/maxkb-mcp) | — |
@@ -121,9 +121,9 @@ Complete inventory of **141 Devin sessions** associated with this workspace, gro
 
 | Date | Title | Status | Session | Repos | PRs |
 |------|-------|--------|---------|-------|-----|
-| 2026-04-12 | SRV · MM · Mac Mini Server (168.119.29.85) | suspended (inactivity) | [`6a4ee04b`](https://app.devin.ai/sessions/6a4ee04bd53d41fa8ca4ae61a12406ea) | — | — |
-| 2026-04-12 | SRV · ID · Data Server (83.228.193.101) | suspended (inactivity) | [`3a607d10`](https://app.devin.ai/sessions/3a607d10a8874d5e872c1b17dc166c66) | — | — |
-| 2026-04-12 | SRV · H2 · Secondary VPS (187.77.25.131) | suspended (inactivity) | [`e887ef11`](https://app.devin.ai/sessions/e887ef11e84e4a1e988b5874b5ebed83) | — | — |
+| 2026-04-12 | SRV · MM · Mac Mini Server | suspended (inactivity) | [`6a4ee04b`](https://app.devin.ai/sessions/6a4ee04bd53d41fa8ca4ae61a12406ea) | — | — |
+| 2026-04-12 | SRV · ID · Data Server | suspended (inactivity) | [`3a607d10`](https://app.devin.ai/sessions/3a607d10a8874d5e872c1b17dc166c66) | — | — |
+| 2026-04-12 | SRV · H2 · Secondary VPS | suspended (inactivity) | [`e887ef11`](https://app.devin.ai/sessions/e887ef11e84e4a1e988b5874b5ebed83) | — | — |
 
 ## Control Center (CTL)
 
@@ -225,13 +225,13 @@ Total orphans: **40**
 | 2026-04-13 | Test mcpServers garza improvement | [`dcc815e3`](https://app.devin.ai/sessions/dcc815e303a743f18a34a054ebdf8d55) | agent:devin-rs |
 | 2026-04-13 | Review projects and them | [`d2e645c7`](https://app.devin.ai/sessions/d2e645c7974642b2b73dd662685a7cff) | agent:devin-rs |
 | 2026-04-12 | PLT · RW · AFFiNE (affine.garza-os.com) | [`5b3ae600`](https://app.devin.ai/sessions/5b3ae600ef8f45cf860843f26519953c) | tier:plt,loc:rw,app:affine,domain:garza-os.com,agent:devin-rs |
-| 2026-04-12 | SRV · MM · Mac Mini Server (168.119.29.85) | [`6a4ee04b`](https://app.devin.ai/sessions/6a4ee04bd53d41fa8ca4ae61a12406ea) | tier:srv,loc:mm,priority:critical,agent:devin-rs |
+| 2026-04-12 | SRV · MM · Mac Mini Server | [`6a4ee04b`](https://app.devin.ai/sessions/6a4ee04bd53d41fa8ca4ae61a12406ea) | tier:srv,loc:mm,priority:critical,agent:devin-rs |
 | 2026-04-12 | APP · IG · Windmill Workflow Engine | [`ccb6f21d`](https://app.devin.ai/sessions/ccb6f21da93447f4862661e6ed4c3033) | tier:app,loc:ig,app:windmill,domain:garzaos.online,priority:high,agent:devin-rs |
 | 2026-04-12 | APP · H1 · Portainer Container Manager | [`2d058633`](https://app.devin.ai/sessions/2d058633234d4860a1b9d5d076e1c9f2) | tier:app,loc:h1,app:portainer,agent:devin-rs |
-| 2026-04-12 | SRV · ID · Data Server (83.228.193.101) | [`3a607d10`](https://app.devin.ai/sessions/3a607d10a8874d5e872c1b17dc166c66) | tier:srv,loc:id,priority:high,agent:devin-rs |
-| 2026-04-12 | SRV · IG · Garza Server (83.228.213.100) | [`643ff0b0`](https://app.devin.ai/sessions/643ff0b0179f4d8c93e8de551d65b63e) | tier:srv,loc:ig,domain:garzaos.online,priority:critical,agent:devin-rs |
-| 2026-04-12 | SRV · H2 · Secondary VPS (187.77.25.131) | [`e887ef11`](https://app.devin.ai/sessions/e887ef11e84e4a1e988b5874b5ebed83) | tier:srv,loc:h2,priority:high,agent:devin-rs |
-| 2026-04-12 | SRV · H1 · Primary Garza Cloud (72.62.86.63) | [`5abfcfc4`](https://app.devin.ai/sessions/5abfcfc4f888449eab9c8e562cb0f377) | tier:srv,loc:h1,domain:garzaos.cloud,priority:critical,agent:devin-rs |
+| 2026-04-12 | SRV · ID · Data Server | [`3a607d10`](https://app.devin.ai/sessions/3a607d10a8874d5e872c1b17dc166c66) | tier:srv,loc:id,priority:high,agent:devin-rs |
+| 2026-04-12 | SRV · IG · Garza Server | [`643ff0b0`](https://app.devin.ai/sessions/643ff0b0179f4d8c93e8de551d65b63e) | tier:srv,loc:ig,domain:garzaos.online,priority:critical,agent:devin-rs |
+| 2026-04-12 | SRV · H2 · Secondary VPS | [`e887ef11`](https://app.devin.ai/sessions/e887ef11e84e4a1e988b5874b5ebed83) | tier:srv,loc:h2,priority:high,agent:devin-rs |
+| 2026-04-12 | SRV · H1 · Primary Garza Cloud | [`5abfcfc4`](https://app.devin.ai/sessions/5abfcfc4f888449eab9c8e562cb0f377) | tier:srv,loc:h1,domain:garzaos.cloud,priority:critical,agent:devin-rs |
 | 2026-04-12 | Create Garza sessions | [`2715ec80`](https://app.devin.ai/sessions/2715ec80e1674ae0af23089f2e7f31f7) | agent:devin-rs |
 | 2026-04-11 | Server Main 2 | [`6c1b7abd`](https://app.devin.ai/sessions/6c1b7abdc242426da2c4bc9b436050cc) | agent:devin-rs |
 | 2026-04-11 | Test Context7 MCP features | [`e21799de`](https://app.devin.ai/sessions/e21799de69794ec48893bc7e72fc70f4) | agent:devin-rs |

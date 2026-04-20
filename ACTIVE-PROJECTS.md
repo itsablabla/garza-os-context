@@ -87,11 +87,11 @@ For deeper context on each brand (running services, env-var conventions, open qu
 
 | Title | Repos | Session |
 |-------|-------|---------|
-| SRV · H1 · Primary Garza Cloud (72.62.86.63) | — | [`5abfcfc4`](https://app.devin.ai/sessions/5abfcfc4f888449eab9c8e562cb0f377) |
-| SRV · H2 · Secondary VPS (187.77.25.131) | — | [`e887ef11`](https://app.devin.ai/sessions/e887ef11e84e4a1e988b5874b5ebed83) |
-| SRV · ID · Data Server (83.228.193.101) | — | [`3a607d10`](https://app.devin.ai/sessions/3a607d10a8874d5e872c1b17dc166c66) |
-| SRV · IG · Garza Server (83.228.213.100) | — | [`643ff0b0`](https://app.devin.ai/sessions/643ff0b0179f4d8c93e8de551d65b63e) |
-| SRV · MM · Mac Mini Server (168.119.29.85) | — | [`6a4ee04b`](https://app.devin.ai/sessions/6a4ee04bd53d41fa8ca4ae61a12406ea) |
+| SRV · H1 · Primary Garza Cloud | — | [`5abfcfc4`](https://app.devin.ai/sessions/5abfcfc4f888449eab9c8e562cb0f377) |
+| SRV · H2 · Secondary VPS | — | [`e887ef11`](https://app.devin.ai/sessions/e887ef11e84e4a1e988b5874b5ebed83) |
+| SRV · ID · Data Server | — | [`3a607d10`](https://app.devin.ai/sessions/3a607d10a8874d5e872c1b17dc166c66) |
+| SRV · IG · Garza Server | — | [`643ff0b0`](https://app.devin.ai/sessions/643ff0b0179f4d8c93e8de551d65b63e) |
+| SRV · MM · Mac Mini Server | — | [`6a4ee04b`](https://app.devin.ai/sessions/6a4ee04bd53d41fa8ca4ae61a12406ea) |
 
 ## Source of Truth
 
