@@ -63,7 +63,8 @@ jobs:
                   topics = (r.get('topics') or '').split()
                   tier = next((t for t in topics if t.startswith('tier-')),'').replace('tier-','') or '—'
                   life = next((t for t in topics if t.startswith('lifecycle-')),'').replace('lifecycle-','') or '—'
-                  lines.append(f"| [{r['name']}](https://github.com/{r['full_name']}) | {tier} | {life} | {'yes' if r['private']=='True' else 'no'} | {'yes' if r['fork']=='True' else 'no'} | {'yes' if r['archived']=='True' else 'no'} |")
+                  def yn(v): return 'yes' if str(v).lower() == 'true' else 'no'
+                  lines.append(f"| [{r['name']}](https://github.com/{r['full_name']}) | {tier} | {life} | {yn(r['private'])} | {yn(r['fork'])} | {yn(r['archived'])} |")
               lines.append('')
 
           with open('docs/data/ITSABLABLA-REPOS.md','w') as f:
