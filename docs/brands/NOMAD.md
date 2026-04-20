@@ -20,11 +20,22 @@ Nomad is the customer support & internet-ops brand. It wraps FreeScout, Zendesk,
 | [`itsablabla/nomad-zendesk-ops`](https://github.com/itsablabla/nomad-zendesk-ops) | stub README | [`79a539a4`](https://app.devin.ai/sessions/79a539a4904340d4afa69f27f39a37d9) |
 | [`itsablabla/nomad-mcp-bridge`](https://github.com/itsablabla/nomad-mcp-bridge) | stub README | [`68af4c1c`](https://app.devin.ai/sessions/68af4c1c7eef4695adc468447dfd1b2a) |
 
+## Running services
+
+- **FreeScout Helpdesk** — https://support.nomad-os.cloud — 11 departments (`support`, `sales`, `billing`, `cancellations`, `compliance`, `neworders`, `orders`, `shipping`, `activations`, `escalations`, `legal`) all `@nomad-os.cloud`. Admin: `jadengarza@pm.me` (password via `$FREESCOUT_ADMIN_PASSWORD`).
+- **FreeScout MCP Server** — exposed via `itsablabla/freescout-mcp-server`; auth via `$FREESCOUT_MCP_API_KEY`.
+- **MCP Factory (Nomad)** — https://mcpfactory-nomad.garzaos.cloud/mcp — Nomad-specific MCP aggregator.
+- **Brand surface** — https://www.nomadinternet.com (primary green `#008061`, deep forest `#14432D`, gold `#DF8600`).
+
 ## Credentials / env var convention
 
-Nomad services expect secrets named `NOMAD_*` or `NMD_*`. Zendesk secrets use `ZENDESK_*`. FreeScout secrets use `FREESCOUT_*`.
+Nomad services expect secrets named `NOMAD_*` or `NMD_*`. Zendesk secrets use `ZENDESK_*`. FreeScout secrets use `FREESCOUT_*` (e.g. `FREESCOUT_ADMIN_PASSWORD`, `FREESCOUT_MCP_API_KEY`). Chatwoot (when wired up) uses `CHATWOOT_*`.
 
 ## Open questions
 
 - Should `nomad-contact-engine` and `Nomad-KPI-System` consume or replace the scaffolded `nomad-customer-bridge` / `nomad-zendesk-ops`? Their scopes overlap.
 - Session `Nomad Internet helpdesk tasks` ([`f512eab5`](https://app.devin.ai/sessions/f512eab546de438c9d838bfcec9f319f)) is the only Nomad session that produced a concrete FreeScout-targeted patch; future helpdesk sessions should link back to it.
+
+## Related brand docs
+
+- [Garza (GRZ)](GARZA.md) · [Last Rock Labs (LRL)](LAST-ROCK-LABS.md) · [Jada](JADA.md) · [Full sessions index](../DEVIN-SESSIONS-INDEX.md) · [Active projects](../../ACTIVE-PROJECTS.md)

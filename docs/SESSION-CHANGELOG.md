@@ -126,6 +126,51 @@ Chronological record of significant development sessions.
 - Review "Sessions Without a Linked Repo" section — some may warrant new dedicated repos (e.g. School Hub, Customer Bridge, Trigger.dev Automations, Zendesk Operations, Chargebee Billing).
 - Automate this index regeneration on a schedule (cron via `devin_schedule_manage`).
 
+### Session: Devin Sessions Project Index — Expand & Cleanup Pass
+**Time:** ~20:00 UTC onward
+**Session ID:** `0f4fb33feb8240d88ab00f0860998f2e` (continuation)
+**Prompts:** `Expand` → `clean up all of them` → `Also retry pulling the full private-repo list to de-orphan more sessions`
+
+**Summary:** Second pass on the Devin sessions index. Resolved the 9 highest-signal orphan projects, added per-brand summary docs, then normalized/polished the docs and re-ran the inference pipeline against the full authenticated repo list (public + private).
+
+**Artifacts created / updated:**
+- `docs/brands/GARZA.md`, `docs/brands/NOMAD.md`, `docs/brands/LAST-ROCK-LABS.md`, `docs/brands/JADA.md` — per-brand summaries covering active repos, running services, credentials/env-var convention, and open questions.
+- 7 new scaffolded repos (`garza-trigger-automations`, `nomad-zendesk-ops`, `lastrock-billing`, `nomad-mcp-bridge`, `coworker-platform`, `jaden-auto`, `genspark-mcp`) — each with `README.md` + `SCOPE.md` + `HANDOFF.md` + `.gitignore`.
+- 2 pre-existing repos discovered (`garza-school-hub`, `nomad-customer-bridge`) — each got a backlinking `HANDOFF.md` without touching existing code.
+- `docs/DEVIN-SESSIONS-INDEX.md` + `ACTIVE-PROJECTS.md` — regenerated with links to brand docs and a "New Repos Scaffolded This Pass" callout.
+
+**Key findings:**
+- Retried the full authenticated GitHub repo list via Composio; successfully retrieved **259 repos** (vs. the 112 public-only seen in pass 1). 147 previously-invisible private repos joined the inference corpus.
+- Added ~120 explicit repo-hint mappings plus a token-matching fallback that scores n-grams from session titles against all 259 repo slugs (with stop-word filtering + ≥40%-length-match guard to avoid noise).
+- Re-ran `build_index.py` against the expanded corpus. **Orphan count dropped from 73 → 40**; **distinct internal repos touched rose from 39 → 99**.
+- Spot-checked matches: Perplexica Search session now correctly links `deep-search`; MCP Development session picks up `garza-mcp-api-server` and `garza-mcp-router` in addition to `garza-mcp`; Last Rock billing session now also shows `last-rock-dev`, `last-rocks-leads`, `lastrock-mcp`.
+
+**Next steps (not yet actioned):**
+- The 40 remaining orphans are almost entirely research / setup / debugging sessions that intentionally produce no repo artifact (e.g. "Look into X", "Test Y", "Debug Z"). These should stay orphaned; the index surfaces them so future sessions can find prior context.
+- Promote `lastrock-billing` from scaffold to real code (priority `critical` per brand doc).
+
+### Session: Cleanup Finalize + Full Repo Inventory
+**Time:** 2026-04-20 ~01:10 UTC
+**Session ID:** `0f4fb33feb8240d88ab00f0860998f2e` (same session, resumed)
+**Prompt:** `Go ahead and download and get a list of all GitHub repos.`
+
+**Summary:** Closed out the cleanup pass by (a) pulling a fresh authenticated repo inventory, (b) remediating a credential leak in the scaffold, and (c) pushing the polished `README.md` + `HANDOFF.md` updates to all 9 scaffolded / pre-existing repos.
+
+**Artifacts:**
+- [`docs/data/ITSABLABLA-REPOS.csv`](data/ITSABLABLA-REPOS.csv) + [`docs/data/ITSABLABLA-REPOS.md`](data/ITSABLABLA-REPOS.md) — full authenticated `itsablabla/*` repo inventory: **262 unique repos** (150 private, 112 public, 66 forks, 0 archived). Net +3 vs. previous pass (`garza-os-personal-intelligence`, `garza-family-presence-plan`, `capy-control`).
+
+**Remediation — Chargebee secret leak in `lastrock-billing/README.md`:**
+- During the Expand pass, the scaffold template's `${CHARGEBEE_API_KEY}` / `${CHARGEBEE_SITE}` placeholders were **shell-interpolated** into the committed README, exposing the actual values.
+- Remediation: [`itsablabla/lastrock-billing@ef01f32`](https://github.com/itsablabla/lastrock-billing/commit/ef01f32dd1088594d2e7807d8265b49573d055ce) replaces HEAD with literal placeholder text.
+- **Still outstanding:** the leaked values live on in git history of `lastrock-billing`. Rotation of the Chargebee API key + optional history scrub (force-push of rewritten branch) are left to the user per their preference. Repo is private and had only the scaffolding commit before remediation, so blast radius is limited to GitHub employees + account collaborators + anyone who cloned in the ~2 h exposure window.
+
+**Cleanup pushes (all 9 repos):**
+- Main-branch doc updates (README + HANDOFF): [`nomad-zendesk-ops`](https://github.com/itsablabla/nomad-zendesk-ops/commit/1d0a381), [`garza-trigger-automations`](https://github.com/itsablabla/garza-trigger-automations/commit/debc35c), [`nomad-mcp-bridge`](https://github.com/itsablabla/nomad-mcp-bridge/commit/4eec108), [`coworker-platform`](https://github.com/itsablabla/coworker-platform/commit/5ddd4d7), [`jaden-auto`](https://github.com/itsablabla/jaden-auto/commit/853245a), [`genspark-mcp`](https://github.com/itsablabla/genspark-mcp/commit/e8079d5).
+- HANDOFF-only updates on pre-existing repos (to avoid touching real code): [`garza-school-hub`](https://github.com/itsablabla/garza-school-hub/commit/307284d) (master), [`nomad-customer-bridge`](https://github.com/itsablabla/nomad-customer-bridge/commit/b843c15) (main).
+- Security fix: [`lastrock-billing`](https://github.com/itsablabla/lastrock-billing/commit/ef01f32) (replace hardcoded Chargebee keys with env-var placeholders).
+
+**Final state of PR #3 (`garza-os-context`):** brand docs, active-projects, sessions index, session changelog, and new `docs/data/ITSABLABLA-REPOS.*` all land on the `devin/1776627932-sessions-index` branch. No CI fails; Kilo Code Review + Devin Review run async.
+
 ---
 
 ## Technical Learnings

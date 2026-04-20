@@ -33,3 +33,7 @@ Key concepts: Skills (modular capability units), Schedules (recurring jobs), Age
 
 - `jada-research` vs `jada-research-2`: are these separate long-running branches or is `jada-research-2` meant to replace the original? Session metadata isn't explicit.
 - `kuse_cowork` lives outside the Jada namespace but shares the cowork concept; worth deciding whether to rename or keep separate.
+
+## Related brand docs
+
+- [Garza (GRZ)](GARZA.md) · [Nomad (NMD)](NOMAD.md) · [Last Rock Labs (LRL)](LAST-ROCK-LABS.md) · [Full sessions index](../DEVIN-SESSIONS-INDEX.md) · [Active projects](../../ACTIVE-PROJECTS.md)

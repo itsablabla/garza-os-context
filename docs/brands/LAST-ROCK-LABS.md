@@ -28,3 +28,7 @@
 ## Open questions
 
 - The `lastrock-billing` session is tagged `priority:critical`. This repo should be the first scaffold to get real code — migrating billing from manual Akaunting to Chargebee.
+
+## Related brand docs
+
+- [Garza (GRZ)](GARZA.md) · [Nomad (NMD)](NOMAD.md) · [Jada](JADA.md) · [Full sessions index](../DEVIN-SESSIONS-INDEX.md) · [Active projects](../../ACTIVE-PROJECTS.md)

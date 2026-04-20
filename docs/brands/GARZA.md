@@ -53,3 +53,7 @@ Garza services expect secrets named `GARZA_*` or `GRZ_*` in the session/org secr
 ## Open questions
 
 - Which Garza apps should be promoted from "session only" to a real repo? (`Fabric AI Memory`, `Perplexica Search`, `Hatchet`, `Windmill` — currently consume upstream repos but have Garza-specific config that lives only in the session.)
+
+## Related brand docs
+
+- [Nomad (NMD)](NOMAD.md) · [Last Rock Labs (LRL)](LAST-ROCK-LABS.md) · [Jada](JADA.md) · [Full sessions index](../DEVIN-SESSIONS-INDEX.md) · [Active projects](../../ACTIVE-PROJECTS.md)
