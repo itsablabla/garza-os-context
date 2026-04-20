@@ -209,3 +209,30 @@ await env.DB.prepare(
   "INSERT INTO history (workflow_id, fix_applied) VALUES (?, ?)"
 ).bind(id, fix).run();
 ```
+
+---
+
+## 2026-04-19 — Phase C v2 Governance Rollout (Phases 4–6)
+
+**Summary:** Executed Phases 4–6 of the v2 governance plan across the 262-repo itsablabla corpus.
+
+### Phase 4 — Lifecycle Pruning (archive)
+Archived 38 repos (reversible) via `GITHUB_UPDATE_A_REPOSITORY` → `archived: true`. All 38 remain discoverable; URLs unchanged. Manifest at `docs/data/PHASE4-ARCHIVED.csv`.
+
+- **10 deprecated:** `Clay-enrichment`, `Nomad-Tick-Admin`, `Nomad-customer-leads`, `Nomad-trucking-leads`, `door-dash-mcp`, `garza-home-mcp`, `last-rocks-leads`, `nextjs-ai-chatbot`, `nomad-kpi`, `supermem`
+- **13 stale experiments (>60d inactive):** `Garza-blue-bubbles`, `boulder-home-automation`, `cf-workers-mcp`, `garza-commander`, `garza-wiki-transfer`, `jadda-os`, `lastrock-mcp`, `n8n-helper`, `protonmail-mcp`, `school-hunt`, `self-help`, `voicenotes-mcp`, `voicenotes-webhook`
+- **15 empty scratch (0 KB, >30d inactive):** `Dev-Bridge`, `Nomad-disaster-leads`, `SETUP_GITHUB_SECRET_INSTRUCTIONS`, `cf-mcp`, `garza-ham`, `garza-orch-bridge`, `last-rock-dev`, `luna-ollama`, `nomad-railway-proxy`, `replit-orchestration-mcp`, `ssh-backup-mcp`, `strapi`, `telegram-bot-gateway-garza`, `test-delete-me`, `vm-relay-temp`
+
+### Phase 5 — Selective Rename (minimal scope)
+Analysis against the 108 live non-fork non-scratch non-archived repos surfaced only **2** ambiguously-named candidates; **1** renamed:
+
+- `Nomad-KPI-System` → `nomad-kpi-system` (lowercase, alignment with naming convention)
+- `telethon` — left as-is (upstream library name, renaming adds no value)
+
+### Phase 6 — Automation + Governance
+- `.github/CODEOWNERS` — default owner `@itsablabla`.
+- `.github/workflows/regen-index.yml` — weekly (Mon 09:00 UTC) repo-list refresh + PR with updated `docs/data/ITSABLABLA-REPOS.{csv,md}`.
+- `.github/workflows/stale-repos.yml` — weekly (Mon 10:00 UTC) audit via `github/stale-repos@v3` (180-day inactivity threshold).
+
+Prior phases (0/2/3a/3b/3c) are captured in commit history on `devin/1776627932-sessions-index`.
+

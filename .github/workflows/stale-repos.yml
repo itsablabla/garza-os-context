@@ -1,0 +1,32 @@
+name: Flag stale repos
+
+# Uses https://github.com/github/stale-repos to audit the user's repos for
+# inactivity based on pushed_at. Produces an artifact we can review weekly.
+
+on:
+  schedule:
+    - cron: '0 10 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run stale-repos
+        uses: github/stale-repos@v3
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ORGANIZATION: itsablabla
+          INACTIVE_DAYS: '180'
+          ADDITIONAL_METRICS: release
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: stale-repos-report
+          path: stale_repos.md
+          if-no-files-found: warn

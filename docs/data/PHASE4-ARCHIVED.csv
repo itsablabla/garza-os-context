@@ -1,0 +1,39 @@
+name,reason,detail,tier,lifecycle
+cf-mcp,empty,"size=0, pushed=112d",tier-scratch,lifecycle-experiment
+Dev-Bridge,empty,"size=0, pushed=80d",tier-scratch,lifecycle-maintenance
+garza-ham,empty,"size=0, pushed=111d",tier-scratch,lifecycle-experiment
+garza-orch-bridge,empty,"size=0, pushed=46d",tier-scratch,lifecycle-maintenance
+last-rock-dev,empty,"size=0, pushed=115d",tier-scratch,lifecycle-experiment
+luna-ollama,empty,"size=0, pushed=42d",tier-scratch,lifecycle-maintenance
+Nomad-disaster-leads,empty,"size=0, pushed=105d",tier-scratch,lifecycle-experiment
+nomad-railway-proxy,empty,"size=0, pushed=49d",tier-scratch,lifecycle-maintenance
+replit-orchestration-mcp,empty,"size=0, pushed=78d",tier-scratch,lifecycle-maintenance
+SETUP_GITHUB_SECRET_INSTRUCTIONS,empty,"size=0, pushed=113d",tier-scratch,lifecycle-experiment
+ssh-backup-mcp,empty,"size=0, pushed=112d",tier-scratch,lifecycle-experiment
+strapi,empty,"size=0, pushed=75d",tier-scratch,lifecycle-maintenance
+telegram-bot-gateway-garza,empty,"size=0, pushed=51d",tier-scratch,lifecycle-maintenance
+test-delete-me,empty,"size=0, pushed=112d",tier-scratch,lifecycle-experiment
+vm-relay-temp,empty,"size=0, pushed=40d",tier-scratch,lifecycle-maintenance
+boulder-home-automation,stale-experiment,pushed=112d,tier-scratch,lifecycle-experiment
+cf-workers-mcp,stale-experiment,pushed=113d,tier-scratch,lifecycle-experiment
+Garza-blue-bubbles,stale-experiment,pushed=107d,tier-scratch,lifecycle-experiment
+garza-commander,stale-experiment,pushed=112d,tier-scratch,lifecycle-experiment
+garza-wiki-transfer,stale-experiment,pushed=105d,tier-scratch,lifecycle-experiment
+jadda-os,stale-experiment,pushed=110d,tier-scratch,lifecycle-experiment
+lastrock-mcp,stale-experiment,pushed=113d,tier-scratch,lifecycle-experiment
+n8n-helper,stale-experiment,pushed=113d,tier-scratch,lifecycle-experiment
+protonmail-mcp,stale-experiment,pushed=107d,tier-scratch,lifecycle-experiment
+school-hunt,stale-experiment,pushed=105d,tier-scratch,lifecycle-experiment
+self-help,stale-experiment,pushed=99d,tier-scratch,lifecycle-experiment
+voicenotes-mcp,stale-experiment,pushed=111d,tier-scratch,lifecycle-experiment
+voicenotes-webhook,stale-experiment,pushed=113d,tier-scratch,lifecycle-experiment
+Clay-enrichment,deprecated,,tier-project,lifecycle-deprecated
+door-dash-mcp,deprecated,,tier-service,lifecycle-deprecated
+garza-home-mcp,deprecated,,tier-service,lifecycle-deprecated
+last-rocks-leads,deprecated,,tier-project,lifecycle-deprecated
+nextjs-ai-chatbot,deprecated,,tier-project,lifecycle-deprecated
+Nomad-customer-leads,deprecated,,tier-project,lifecycle-deprecated
+nomad-kpi,deprecated,,tier-project,lifecycle-deprecated
+Nomad-Tick-Admin,deprecated,,tier-project,lifecycle-deprecated
+Nomad-trucking-leads,deprecated,,tier-project,lifecycle-deprecated
+supermem,deprecated,,tier-project,lifecycle-deprecated
